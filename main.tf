@@ -8,6 +8,13 @@ resource "tls_cert_request" "request" {
   subject {
     common_name  = var.username
     organization = var.organization
+    country = var.legacy_defaults ? "" : null
+    locality = var.legacy_defaults ? "" : null
+    organizational_unit = var.legacy_defaults ? "" : null
+    postal_code = var.legacy_defaults ? "" : null
+    province = var.legacy_defaults ? "" : null
+    serial_number = var.legacy_defaults ? "" : null
+    street_address = var.legacy_defaults ? [] : null
   }
 }
 
