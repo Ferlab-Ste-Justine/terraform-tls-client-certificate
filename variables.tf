@@ -27,3 +27,9 @@ variable "ca" {
   type        = any
   sensitive   = true
 }
+
+variable "legacy_defaults" {
+  description = "If set to true, the unspecified subject fields will be set to the defaults of version 3 (empty values) of the tls provider instead of version 4 (omitted)"
+  type        = bool
+  default     = false
+}
