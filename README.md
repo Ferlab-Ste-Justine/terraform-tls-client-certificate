@@ -1,6 +1,8 @@
 # About
 
-Given a certificate authority that is recognized by an etcd cluster, this terraform module will provision a client certificate that can be used to authenticate against the etcd cluster as a given user.
+Given a certificate authority that is recognized by a server, this terraform module will provision a client certificate that can be used to authenticate against the server as a given user.
+
+It assumes that the server will map the user's identity to the certificate's common name.
 
 # Usage
 
@@ -24,6 +26,6 @@ The module outputs the following values:
 
 ## Previous Repo
 
-This project used to be located at this repo: https://github.com/Ferlab-Ste-Justine/openstack-etcd-client-certificate
+This project used to be located at this repo: https://github.com/Ferlab-Ste-Justine/terraform-tls-client-certificate
 
-However, the project is technically not openstack specific and we also had to do a somewhat disruptive change due to a backward-incompatible change in expected certificate arguments so we opted to just leave the previous repo as is for older orchestration and open up a new project with the corrected name for orchestration going forward.
+However, the project is technically not dependant on openstack and we also had to do a somewhat disruptive change due to a backward-incompatible change in expected certificate arguments so we opted to just leave the previous repo as is for older orchestration and open up a new project with the corrected name for orchestration going forward.

@@ -1,5 +1,5 @@
 variable "organization" {
-  description = "The etcd client's certificates' organization"
+  description = "The client's certificates' organization"
   type        = string
   default     = "Ferlab"
 }
